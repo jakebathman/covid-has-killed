@@ -392,6 +392,12 @@
                     color: #cbd5e0;
                     color: rgba(203, 213, 224, var(--text-opacity))
                 }
+
+                .dark\:text-gray-200 {
+                    --text-opacity: 1;
+                    color: #edf2f7;
+                    color: rgba(237, 242, 247, var(--text-opacity))
+                }
             }
         </style>
 
@@ -404,8 +410,8 @@
 
     <body class="antialiased">
         <div
-            class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-            <div class="block text-gray-200 text-xxl">
+            class="relative flex items-top justify-center min-h-screen bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-200 sm:items-center sm:pt-0">
+            <div class="block text-xxl">
                 <div class="p-6">Current deaths (US): 240,782</div>
 
                 <div class="p-6">COVID-19 in the US has now killed more than the population of Garland, Texas, which has 239,928
