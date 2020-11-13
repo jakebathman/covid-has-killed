@@ -25,14 +25,14 @@
         <meta property="og:url" content="https://covidhaskilled.us/">
         <meta property="og:title" content="COVID: City Killer">
         <meta property="og:description" content="As of today, COVID-19 has killed more than the population of {{ $place->place }}">
-        <meta property="og:image" content="/covidhaskilled.png">
+        <meta property="og:image" content="https://covidhaskilled.us/covidhaskilled.png">
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:url" content="https://covidhaskilled.us/">
         <meta property="twitter:title" content="COVID: City Killer">
         <meta property="twitter:description" content="As of today, COVID-19 has killed more than the population of {{ $place->place }}">
-        <meta property="twitter:image" content="/covidhaskilled.png">
+        <meta property="twitter:image" content="https://covidhaskilled.us/covidhaskilled.png">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
