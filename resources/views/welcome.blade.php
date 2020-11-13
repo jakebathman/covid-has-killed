@@ -32,12 +32,15 @@
     </head>
 
     <body class="h-screen antialiased light:bg-gray-100 light:text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+        <div class="absolute right-0 px-2 light:text-gray-500 dark:text-gray-600 pt-1 pr-3 text-sm ">
+            Made by <a class="font-bold light:text-blue-300 dark:text-blue-700" href="https://twitter.com/jakebathman">@jakebathman</a>
+        </div>
         <div class="flex flex-col justify-between text-xl sm:text-2xl md:text-3xl lg:text-4xl center h-full">
 
-            <div class="flex flex-col text-center items-center justify-center h-full">
-                <div class="px-10 py-3 md:px-20 md:py-10">Current deaths (US): 240,782</div>
-                <div class="px-10 py-3 md:px-20 md:py-10">COVID-19 in the US has now killed more than the population of <span class="font-bold">Garland, Texas</span>, which has <span class="font-bold">239,928 residents</span>.</div>
-                <div class="px-10 py-3 md:px-20 md:py-10">It’s the <span class="font-bold">94<sup>th</sup></span> most populous city in the nation.</div>
+            <div class="flex flex-col text-center items-center justify-evenly" style="height: 55vh;">
+                <div class="px-10 md:px-20">Current deaths (US): {{ number_format($currentDeaths) }}</div>
+                <div class="px-10 md:px-20">COVID-19 in the US has now killed more than the population of <span class="font-bold">{{ $place->place }}</span>, which has <span class="font-bold">{{ number_format($place->population) }} residents</span>.</div>
+                <div class="px-10 md:px-20">It’s the <span class="font-bold">{{ $place->rank }}<sup>{{ $place->rankOrdinal() }}</sup></span> most populous city in the nation.</div>
             </div>
 
             <div class="w-full" style="height: 55vh;">
@@ -58,13 +61,13 @@
         var mapDark = new mapboxgl.Map({
             container: 'mapDark',
             style: 'mapbox://styles/jakebathman/ckhfchage04sw19oi822t9jat',
-            center: [-97.910815, 39.93424],
+            center: [-97.910815, 39.93424], // center of US
             zoom: 2,
         });
 
         mapDark.on('load', function () {
             mapDark.flyTo({
-                center: [-96.615821, 32.931523],
+                center: [{{ $place->lng }}, {{ $place->lat }}],
                 zoom: 9,
                 speed: 0.3,
                 easing(x) {
@@ -76,13 +79,13 @@
         var mapLight = new mapboxgl.Map({
             container: 'mapLight',
             style: 'mapbox://styles/jakebathman/ckhfe7d260erk19qkycjbeqcw',
-            center: [-97.910815, 39.93424],
+            center: [-97.910815, 39.93424], // center of US
             zoom: 2,
         });
 
         mapLight.on('load', function () {
             mapLight.flyTo({
-                center: [-96.615821, 32.931523],
+                center: [{{ $place->lng }}, {{ $place->lat }}],
                 zoom: 9,
                 speed: 0.3,
                 easing(x) {
