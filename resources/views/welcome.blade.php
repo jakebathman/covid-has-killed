@@ -14,6 +14,26 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
 
+
+        <!-- Primary Meta Tags -->
+        <title>COVID: City Killer</title>
+        <meta name="title" content="COVID: City Killer">
+        <meta name="description" content="As of today  COVID-19 has killed more than the population of {{ $place->place }}">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://covidhaskilled.us/">
+        <meta property="og:title" content="COVID: City Killer">
+        <meta property="og:description" content="As of today, COVID-19 has killed more than the population of {{ $place->place }}">
+        <meta property="og:image" content="/covidhaskilled.png">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://covidhaskilled.us/">
+        <meta property="twitter:title" content="COVID: City Killer">
+        <meta property="twitter:description" content="As of today, COVID-19 has killed more than the population of {{ $place->place }}">
+        <meta property="twitter:image" content="/covidhaskilled.png">
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
