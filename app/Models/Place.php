@@ -516,8 +516,8 @@ class Place extends Model
           'population' => '274492',
           'rank' => '75',
           'place' => 'Chula Vista, California',
-          'lat' => '33.016928',
-          'lng' => '-116.846046',
+          'lat' => '32.640072',
+          'lng' => '-117.084038',
         ],
         [
           'population' => '272779',
