@@ -467,8 +467,8 @@ class Place extends Model
           'population' => '289102',
           'rank' => '68',
           'place' => 'Lincoln, Nebraska',
-          'lat' => '40.865142',
-          'lng' => '-96.823133',
+          'lat' => '40.813600',
+          'lng' => '-96.702610',
         ],
         [
           'population' => '288000',
