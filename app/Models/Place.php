@@ -425,8 +425,8 @@ class Place extends Model
           'population' => '312697',
           'rank' => '62',
           'place' => 'Stockton, California',
-          'lat' => '37.672196',
-          'lng' => '-121.298794',
+          'lat' => '37.957539',
+          'lng' => '-121.292450',
         ],
         [
           'population' => '308096',
