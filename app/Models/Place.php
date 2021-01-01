@@ -390,8 +390,8 @@ class Place extends Model
           'population' => '345064',
           'rank' => '56',
           'place' => 'Honolulu, Hawaii',
-          'lat' => '24.859832',
-          'lng' => '-168.021815',
+          'lat' => '21.306944',
+          'lng' => '-157.858337',
         ],
         [
           'population' => '332318',
