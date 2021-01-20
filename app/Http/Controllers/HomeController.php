@@ -12,11 +12,17 @@ class HomeController extends Controller
     public function index()
     {
         $currentDeaths = $this->getCurrentDeaths();
-        $place = Place::where('population', '<=', $currentDeaths)->orderByDesc('population')->first();
+
+        if ($rank = request('rank')) {
+            $place = Place::where('rank', $rank)->first();
+        } else {
+            $place = Place::where('population', '<=', $currentDeaths)->orderByDesc('population')->first();
+        }
 
         return view('welcome', [
             'place' => $place,
             'currentDeaths' => $currentDeaths,
+            'rank' => request('rank'),
         ]);
     }
 
